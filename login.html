@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .btn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  font-size: 16px;
+  cursor: pointer;
+}.absolute{
+  position: absolute;
+  top: 130px;
+  right:100px;
+  bottom: 50px;
+  
+}
+
+    body {
+      font-family: Arial;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+    
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Student {background-color: rgb(252, 166, 5);}
+#Teacher {background-color: rgb(11, 146, 124);}
+#Course {background-color: rgb(99, 56, 139);}
+#About {background-color: rgb(255, 0, 106);}
+</style>
+
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 12px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        #myUL {
+          list-style-type: none;
+          padding: 0 px;
+          width: 300px;
+          height: 100px;
+          margin: 0;
+        }
+        
+        #myUL li a {
+          border: 1px solid #ddd;
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #7632cf;
+          padding: 12px;
+          text-decoration: rebeccapurple;
+          font-size: 18px;
+          color: black;
+          display: block
+        }
+        
+        #myUL li a:hover:not(.header) {
+          background-color: #eee;
+        }
+        </style>
+        </head>
+<style>
+body {
+  font-family: Arial;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color:rgb(22, 153, 125);
+  overflow: scroll;
+  padding: 110px;
+  text-align: right;
+
+}
+</style>
+
+<style>
+  #b{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding:10px;
+    
+  }
+    body {
+      margin: 0;
+      min-width: 250px;
+    }
+    
+    /* Include the padding and border in an element's total width and height */
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Remove margins and padding from the list */
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Style the list items */
+    ul li {
+      cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      list-style-type: none;
+      background:black;
+      font-size: 18px;
+      transition: 0.2s;
+      
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Set all odd list items to a different color (zebra-stripes) */
+    ul li:nth-child(odd) {
+      background: #f9f9f9;
+    }
+    
+    /* Darker background-color on hover */
+    ul li:hover {
+      background:black;
+    }
+    
+    /* When clicked on, add a background color and strike out text */
+    ul li.checked {
+      background: #888;
+      color: #fff;
+      text-decoration: line-through;
+    }
+    
+    /* Add a "checked" mark when clicked on */
+    ul li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #fff;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+    }
+    
+    /* Style the close button */
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+    
+    .close:hover {
+      background-color: #f44336;
+      color: white;
+    }
+    
+    /* Style the header */
+    .header {
+      background-color: #f44336;
+      /*padding-top: 10px;
+      padding-right: 15px;
+      padding-bottom: 10px;
+      padding-left:15px ;*/
+      border: 20px #f44336;
+      padding: 10px;
+      width: 300px;
+      color: white;
+      text-align: center;
+    }
+    
+    /* Clear floats after the header */
+    .header:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the input */
+    input {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 75%;
+      padding: 10px;
+      float: left;
+      font-size: 16px;
+    }
+    
+    /* Style the "Add" button */
+    .addBtn {
+      padding: 10px;
+      width: 25%;
+      background: #d9d9d9;
+      color: #555;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+    }
+    
+    .addBtn:hover {
+      background-color: #bbb;
+    }
+    </style>
+<style>
+    .footer {
+       position: initial;
+       left: 0;
+       bottom: 0;
+       font-size: smaller;
+       width: 100%;
+       background-color: rgb(44, 37, 37);
+       color: white;
+       text-align: center;
+    }
+    </style>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        h1.abc{
+            border: 1px solid green;
+            padding-top: 100px;
+            background-color: teal;
+            text-align: center;
+            
+
+        }
+        
+        html {
+          box-sizing: border-box;
+        }
+        
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+        
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          margin: 8px;
+        }
+        
+        .about-section {
+          padding: 100px;
+          text-align: center;
+          background-color: #474e5d;
+          color: white;
+        }
+        
+        .container {
+          padding: 0 16px;
+        }
+        
+        .container::after, .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        .title {
+          color: grey;
+          text-align: right;
+          padding-right: 1000px;
+          width: 500px;
+
+        }
+        
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 50px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        .button:hover {
+          background-color: #555;
+        }
+        
+        @media screen and (max-width: 300px) {
+          .column {
+            width: 200%;
+            height:50%
+
+        
+          }
+        }
+        </style>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #161414;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #2e2a2a;
+            }
+            </style>
+            <style>
+                .container {
+                  position: relative;
+                  width: 25%;
+                  height: 50%;
+                  overflow: hidden;
+                  padding-top: 100%; /* 3:2 Aspect Ratio */
+                }
+                
+                .responsive-iframe {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                }
+                </style>
+</head>
+<body>
+  
+    <h1 class="abc" > WELCOME TO E-LEARNING<div class="absolute"> <form action="home.html"><button  class="btn" > <i class="fa fa-home"></i></button></form></div> </h1>
+    
+
+<button class="tablink" onclick="openPage('Student', this, '  rgb(252, 166, 5)')"id="defaultOpen">Student</button>
+<button class="tablink" onclick="openPage('Teacher', this, 'rgb(11, 146, 124)')" >Teacher</button>
+<button class="tablink" onclick="openPage('Course', this, 'rgb(99, 56, 139)')">Course</button>
+<button class="tablink" onclick="openPage('About', this, 'rgb(255, 0, 106)')">About</button>
+<div>
+
+</div>
+<div id="Student" class="tabcontent">
+  
+  <h3>Register Now!!</h3>
+  <p> click this to register</p>
+  <form action="/action_page.php">
+    
+    <button id="b" type formaction= "register.html" >register</button>
+  </form> 
+  <div id="myDIV" class="header">
+    <h2 style="margin:5px">My To Do List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+  
+  <ul id="myUL">
+    <li>english</li>
+    <li class="checked">tamil</li>
+    <li>Maths</li>
+    <li>social</li>
+   
+  </ul>
+  
+  <script>
+  // Create a "close" button and append it to each list item
+  var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+  
+  // Click on a close button to hide the current list item
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+  
+  // Add a "checked" symbol when clicking on a list item
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+  
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  </script>
+</div>
+
+<div id="Teacher" class="tabcontent">
+  <h3>Teacher details</h3>
+ 
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Course</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>C-programming</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>C++</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Deep learning</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Html</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Java</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Web designing</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
+
+</div>
+
+<div id="Course" class="tabcontent">
+    
+  
+
+
+<form class="example" action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<h2></h2>
+<h3>Courses</h3>
+<p> Best seller</p>
+
+<div class="container"> 
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY""></iframe>
+  
+</div>
+<div class="container"> 
+    
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY""></iframe>
+    
+  </div>
+  
+
+
+ 
+</div>
+
+<div id="About" class="tabcontent">
+    <div class="about-section">
+        <h2>About Us</h2>
+        <h1>Empowering others</h1>
+        <p>Our mission is to empower every person and every organization on the planet to achieve more.</p>
+  
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+              
+            <img src="team2.jpg" alt="Jane" style="width:100%">
+            <div class="container">
+              <h2 style ="color:black" ></h2>Jan machel</h2>
+              <p class="title">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>jane@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="team3.jpg" alt="Mike" style="width:100%">
+            <div class="container">
+              <h2>Mike Ross</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>mike@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="images (1).jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>john@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+  <div class="footer">
+    <p>Elearniing is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using Elearning, you agree to have read and accepted our terms of use, cookie and privacy policy.
+  
+      Copyright 1999-2020 by Refsnes Data. All Rights Reserved.
+      Elearning is Powered by W3.CSS.</p>
+  </div>
+  
+</body>
+</html> 

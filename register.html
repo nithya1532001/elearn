@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 12px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid rgba(24, 22, 21, 0);
+          margin-bottom: 12px;
+        }
+        
+        #myUL {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        #myUL li a {
+          border: 1px solid #ddd;
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #111010;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px;
+          color: black;
+          display: block
+        }
+        
+        #myUL li a:hover:not(.header) {
+          background-color: rgb(179, 69, 223);
+        }
+        </style>
+        </head>
+<style>
+body {
+  font-family: Arial;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #565158;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #e8e4eb;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: #8e66a0;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3>Registration form</h3>
+<p>Please fill this form:</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+       <option value="india">India</option>
+        <option value="uae">UAE</option>
+         <option value="africa">AFRICA</option>
+         <label for="age">Age</label>
+    <input type="text" id="age" name="age" placeholder="Your age">
+    <label for="mnum">Mobile Number</label>
+    <input type="text" id="mnum" name="mnum" placeholder="Enter your Mobile Number">
+    <label for="dob">Date of Birth</label>
+    <input type="text" id="dob" name="dob" placeholder="Your Date of Birth">
+     <label for="add">Address</label>
+    <input type="text" id="add" name="add" placeholder="Your Address..">    
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" placeholder="Your state..">    <label for="pin">Pincode</label>
+    <input type="text" id="pin" name="pin" placeholder="Your Pincode..">    
+    <label for="course">Course</label>
+    
+    <select id="course" name="Course">
+    <option value="C-programming">C-programming</option>
+      <option value="c++">C++</option>
+      <option value="deeplearning">Deep learning</option>
+       <option value="Html">Html</option>
+        <option value="Machine learning">Machine learning</option>
+         <option value="Java ">Java</option>
+         
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
